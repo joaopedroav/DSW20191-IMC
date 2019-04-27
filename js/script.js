@@ -7,6 +7,10 @@ function getFormElements() {
 
     imc = parseFloat((peso / (altura * altura)).toFixed(2));
 
+    if (isNaN(imc)) {
+        imc = 0;
+    }
+
     if (imc < 18.5) {
         status = "Abaixo do peso";
     } else if ((imc >= 18.5) && (imc <= 24.9)) {
